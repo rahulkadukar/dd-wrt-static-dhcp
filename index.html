@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel='stylesheet', href='css/index.css'>
+    <title>DD-WRT static DHCP</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="navbar">
+        DD-WRT Static DHCP
+      </div>
+      <div class="row">
+        <div id="outputTableDiv">
+          <table id="outputTable">
+            <thead>
+              <tr>
+                <th>MAC Address</th>
+                <th>Machine Name</th>
+                <th>IP Address</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="outputRows">
+            </tbody>
+          </table>
+          <button class="btn" id="generate">Generate</button>
+          <button class="btn" id="addRow">Add Row</button>
+        </div>
+        <div id="textAreaDiv">
+          <textarea id="nvramString"></textarea>
+        </div>
+        <div id="outputDiv">
+          <textarea id="routerScript"></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="js/index.js"></script>
+  </body>
+</html>
