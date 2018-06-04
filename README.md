@@ -1,4 +1,7 @@
 # dd-wrt-static-dhcp
-GUI to enable creation of DD-WRT static DHCP assignment script
 
-#### SCRIPT IS STILL EXPERIMENTAL DO NOT USE THIS.
+## SCRIPT IS STILL EXPERIMENTAL DO NOT USE THIS.
+
+GUI to enable creation of DD-WRT static DHCP assignment script.
+
+[Use this link to test](https://rahulkadukar.github.io/dd-wrt-static-dhcp/)
