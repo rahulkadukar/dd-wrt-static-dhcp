@@ -1,10 +1,11 @@
 $(document).ready(function(){
   let finalData = [];
+  $('#routerScript').hide();
 
   $('#addRow').click(function(){
     let newRow = '<tr>';
     for (let x = 0; x < 4; ++x) {
-      newRow += '<td contenteditable="true"></td>';
+      newRow += '<td contenteditable="true" max-width="200px"></td>';
     }
     newRow += '</tr>';
     $('#outputRows').append(newRow);
@@ -26,7 +27,7 @@ $(document).ready(function(){
     }
 
     $('#outputRows').empty();
-    let outputContents;
+    let outputContents = '';
 
     for (let x in routerData) {
       let newRow = '<tr>';
@@ -73,6 +74,8 @@ $(document).ready(function(){
 
     routerString += '"';
     routerString += '\nnvram set static_leasenum=' + finalData.length;
+    routerString += '\nnvram commit';
     $('#routerScript').text(routerString);
+    $('#routerScript').show();
   })
 });

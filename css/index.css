@@ -76,12 +76,18 @@ div.row div {
 	padding: 10px;
 }
 
+#outputTable tr:last-child {
+	border-bottom: 2px solid red;
+}
+
 #outputTable {
 	width: 100%;
+	table-layout: fixed;
 }
 
 #outputTable tr td, #outputTable tr th {
 	padding: 10px;
+	border: 2px solid #000000;
 }
 
 #outputTable tr th {
@@ -93,8 +99,8 @@ div.row div {
 }
 
 #outputTable tr td {
-	border-top: 1px solid #dee2e6;
-	border-bottom: 1px solid #dee2e6;
+	border-top: 2px solid #dee2e6;
+	border-bottom: 2px solid #dee2e6;
 }
 
 .btn {

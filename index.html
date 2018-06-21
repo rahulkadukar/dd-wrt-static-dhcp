@@ -1,12 +1,15 @@
 <html>
   <head>
     <link rel='stylesheet', href='css/index.css'>
-    <title>DD-WRT static DHCP</title>
+    <title>DD-WRT static DHCP Generator</title>
   </head>
   <body>
     <div id="container">
       <div id="navbar">
-        DD-WRT Static DHCP
+        DD-WRT Static DHCP Generator
+      </div>
+      <div class="row">
+        <div>Click on any cell and enter data in the table below.</div>
       </div>
       <div class="row">
         <div id="outputTableDiv">
@@ -26,7 +29,7 @@
           <button class="btn" id="addRow">Add Row</button>
         </div>
         <div id="textAreaDiv">
-          <textarea id="nvramString"></textarea>
+          <textarea id="nvramString" placeholder="Enter nvram string here"></textarea>
         </div>
         <div id="outputDiv">
           <textarea id="routerScript"></textarea>
