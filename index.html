@@ -12,6 +12,7 @@
         <div>Click on any cell and enter data in the table below.</div>
       </div>
       <div class="row">
+        <div id="errMessage"></div>
         <div id="outputTableDiv">
           <table id="outputTable">
             <thead>
@@ -29,10 +30,18 @@
           <button class="btn" id="addRow">Add Row</button>
         </div>
         <div id="textAreaDiv">
-          <textarea id="nvramString" placeholder="Enter nvram string here"></textarea>
+          <textarea id="nvramString" placeholder="Enter nvram string here
+Steps:
+  * SSH into a DD-WRT enabled router
+  * Enter the command &quot;nvram get static_leases&quot shown below
+  * Copy the output of that command and paste here
+  * If all is well, the table above will populate once you click out"></textarea>
+        </div>
+        <div id="nvramCommand">
+          nvram get static_leases
         </div>
         <div id="outputDiv">
-          <textarea id="routerScript"></textarea>
+          <textarea id="routerScript" placeholder></textarea>
         </div>
       </div>
     </div>

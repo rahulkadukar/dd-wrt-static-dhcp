@@ -1,6 +1,7 @@
 $(document).ready(function(){
   let finalData = [];
   $('#routerScript').hide();
+  $('#errMessage').hide();
 
   $('#addRow').click(function(){
     let newRow = '<tr>';
@@ -44,6 +45,8 @@ $(document).ready(function(){
   })
 
   $('#generate').click(function() {
+    $('#errMessage').html('');
+    $('#errMessage').hide();
     let allData = [];
 
     $('#outputTable > tbody > tr').each(function() {
@@ -55,12 +58,37 @@ $(document).ready(function(){
 
     let finalData = [];
 
+    if (allData.length === 0) {
+      $('#errMessage').html('<p>Enter some data into the table before clicking Generate</p>');
+      $('#errMessage').show();
+      return;
+    }
+
     for (let x = 0; x < allData.length;) {
       let rowData = {};
       rowData.mac = allData[x];
       rowData.name = allData[x + 1];
       rowData.ip = allData[x + 2];
       rowData.dur = allData[x + 3];
+
+      if (rowData.mac.length < 1) {
+        $('#errMessage').html('<p>MAC address field cannot be blank</p>');
+        $('#errMessage').show();
+        return;
+      }
+
+      if (rowData.name.length < 1) {
+        $('#errMessage').html('<p>Name of machine cannot be blank</p>');
+        $('#errMessage').show();
+        return;
+      }
+
+      if (rowData.ip.length < 1) {
+        $('#errMessage').html('<p>IP address field cannot be blank</p>');
+        $('#errMessage').show();
+        return;
+      }
+
       finalData.push(rowData);
       x += 4;
     }

@@ -126,3 +126,19 @@ textarea {
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+#errMessage {
+	border: 1px solid #ebcccc;
+	padding: 10px;
+	margin: 10px;
+	background-color: #f2dede;
+  color: #a94442;
+}
+
+#nvramCommand {
+	background-color: #dff0d8;
+	border: 1px solid #d0e9c6;
+	color: #3c763d;
+	padding: 10px;
+	margin: 10px;
+}
